@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "365006469883",
+    "project_id": "taskmaster-eaf44",
+    "storage_bucket": "taskmaster-eaf44.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365006469883:android:1fc09492cd83e55e00ce5e",
+        "android_client_info": {
+          "package_name": "br.com.hudson.taskmaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO1OMeTX_VzBYrcHsI-Y_Za5c0Aa0kJXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
