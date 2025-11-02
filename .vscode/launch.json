@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rodar e Debugar (Android)",
+      "type": "reactnative",
+      "request": "launch",
+      "platform": "android",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Rodar e Debugar (iOS)",
+      "type": "reactnative",
+      "request": "launch",
+      "platform": "ios",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug (Atrelar ao Hermes)",
+      "type": "reactnative",
+      "request": "attach",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

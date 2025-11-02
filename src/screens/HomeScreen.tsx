@@ -18,6 +18,8 @@ import {
 } from "react-native-paper";
 import { colors } from "../constants/colors";
 import { ITask } from "../@types/task";
+import { useEffect } from "react";
+import * as taskStorage from "../storage/taskStorage";
 
 type TaskItemProps = {
   task: ITask;
@@ -50,12 +52,22 @@ export function HomeScreen() {
     { id: "2", title: "Adicionar animações", completed: false },
   ]);
 
-  const handleToggleTask = (id: String) => {
-    setTasks((prevTasks) =>
-      prevTasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
-    );
+  useEffect(() => {
+    const loadedTasks = taskStorage.getTasks();
+    setTasks(loadedTasks);
+  }, []);
+
+  const handleToggleTask = (id: string) => {
+    // A função de storage já retorna a lista atualizada
+    const updatedTasks = taskStorage.toggleTask(id);
+    setTasks(updatedTasks);
+  };
+
+  // Exemplo de como seria o fluxo de adicionar uma nova tarefa
+  const handleAddTask = (title: string) => {
+    taskStorage.addTask(title); // Salva no storage
+    const updatedTasks = taskStorage.getTasks(); // Recarrega a lista
+    setTasks(updatedTasks);
   };
 
   return (
